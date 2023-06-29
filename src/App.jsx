@@ -1,7 +1,7 @@
 import {puppyList} from './data.js'
 import './App.css'
 import { useState } from 'react'
-
+import './style.css'
 function App() {
   
 const [puppies, setPuppies] = useState(puppyList)
@@ -16,7 +16,7 @@ const featuredPup = puppies.find((pup) => pup.id === featPupId)
         })
       }
       {featPupId && (
-        <div>
+        <div className='selectedPup'>
           <h2>{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
@@ -31,5 +31,6 @@ const featuredPup = puppies.find((pup) => pup.id === featPupId)
     
  
 }
+
 
 export default App
